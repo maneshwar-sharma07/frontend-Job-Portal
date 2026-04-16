@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobPortal Pro - Find Your Next Career</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">JobPortal **Pro**</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="jobs.html">Job Listings</a></li>
+                <li><a href="news.html">Tech News</a></li>
+                <li><a href="chat.html">Anon Chat</a></li>
+                <li><a href="user-login.html" class="btn btn-primary">Job Seeker Login</a></li>
+                <li><a href="recruiter-login.html" class="btn btn-secondary">Recruiter Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>Find Your **Dream Job** Today.</h1>
+                <p>Connecting top talent with leading companies worldwide.</p>
+                
+                <form class="search-bar" id="home-search-form">
+                    <input type="text" id="job-title-search" placeholder="Job Title, Keyword, or Company" required>
+                    <input type="text" id="location-search" placeholder="Location (City, State)" required>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="info-section container">
+            <div class="card">
+                <h3><i class="fas fa-briefcase"></i> 100k+ Jobs Posted</h3>
+                <p>Diverse opportunities in Tech, Marketing, Finance, and more.</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-users"></i> Top Companies</h3>
+                <p>Work with industry leaders and innovative startups.</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-shield-alt"></i> Secure & Private</h3>
+                <p>Your data and applications are handled with the utmost security.</p>
+            </div>
+        </section>
+        
+        <section class="featured-jobs container">
+            <h2>🔥 **Featured Job Listings**</h2>
+            <div id="job-list-container" class="job-grid">
+                </div>
+            <a href="jobs.html" class="view-all-link">View All Jobs &rarr;</a>
+        </section>
+
+        <section class="latest-news container">
+            <h2>📰 **Latest Tech News**</h2>
+            <div id="news-container" class="news-grid">
+                </div>
+            <a href="news.html" class="view-all-link">View All News &rarr;</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 JobPortal Pro. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

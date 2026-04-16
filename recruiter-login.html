@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter Login - JobPortal Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <main class="auth-page">
+        <div class="auth-card card">
+            <h2>Recruiter **Login**</h2>
+            <form id="recruiter-login-form">
+                <div class="form-group">
+                    <label for="companyEmail">Company Email</label>
+                    <input type="email" id="companyEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-secondary full-width">Recruiter Sign In</button>
+            </form>
+
+            <p class="switch-link">
+                New to the platform? Contact us to set up your <a href="#">Recruiter Account</a>.
+            </p>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('recruiter-login-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            // FRONT-END SIMULATION: 
+            alert('Recruiter Login Attempted. (Redirecting to Dashboard in a real app...)');
+            // window.location.href = 'recruiter-dashboard.html';
+        });
+    </script>
+</body>
+</html>

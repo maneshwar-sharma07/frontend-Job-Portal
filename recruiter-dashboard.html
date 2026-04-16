@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter Dashboard - JobPortal Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">JobPortal **Pro**</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" style="padding-top: 30px;">
+        <h1 style="margin-bottom: 30px;"><i class="fas fa-chart-line"></i> Recruiter Dashboard (Company Name)</h1>
+        
+        <section class="add-job-section card" style="margin-bottom: 40px;">
+            <h2><i class="fas fa-plus-square"></i> Post a New Job</h2>
+            <form id="add-job-form" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+                <div class="form-group"><input type="text" placeholder="Job Title" required></div>
+                <div class="form-group"><input type="text" placeholder="Location (e.g., Remote, City, State)" required></div>
+                <div class="form-group"><input type="number" placeholder="Min Salary (e.g., 90000)" required></div>
+                <div class="form-group"><input type="number" placeholder="Max Salary (e.g., 120000)"></div>
+                <div class="form-group" style="grid-column: span 2;"><textarea rows="4" placeholder="Job Description" required></textarea></div>
+                <div class="form-group" style="grid-column: span 2;"><textarea rows="2" placeholder="Key Requirements/Qualifications"></textarea></div>
+                <div style="grid-column: span 2; text-align: right;"><button type="submit" class="btn btn-secondary">Post Job</button></div>
+            </form>
+        </section>
+
+        <section class="job-applications-list">
+            <h2><i class="fas fa-list-alt"></i> Manage Posted Jobs & Applicants</h2>
+            <div id="posted-jobs-container" class="job-grid">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 JobPortal Pro. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="recruiter.js"></script>
+</body>
+</html>

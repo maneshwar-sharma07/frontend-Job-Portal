@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings - JobPortal Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">JobPortal **Pro**</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html" class="active">Job Listings</a></li>
+                <li><a href="news.html">Tech News</a></li>
+                <li><a href="chat.html">Anon Chat</a></li>
+                <li><a href="user-login.html" class="btn btn-primary">Job Seeker Login</a></li>
+                <li><a href="recruiter-login.html" class="btn btn-secondary">Recruiter Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" style="padding-top: 30px;">
+        <section class="job-search-filters">
+            <h2>Find Jobs That Match Your Career Goals</h2>
+            <form class="advanced-filters" id="job-filters-form">
+                <input type="text" id="jobTitle" placeholder="Job Title/Keyword">
+                <input type="text" id="jobLocation" placeholder="Location">
+                <select id="salaryRange">
+                    <option value="">Salary Range</option>
+                    <option value="50k-70k">$50,000 - $70,000</option>
+                    <option value="70k-100k">$70,000 - $100,000</option>
+                    <option value="100k-150k">$100,000 - $150,000</option>
+                    <option value="150k+">$150,000+</option>
+                </select>
+                <select id="jobType">
+                    <option value="">Job Type</option>
+                    <option value="Full-Time">Full-Time</option>
+                    <option value="Part-Time">Part-Time</option>
+                    <option value="Remote">Remote</option>
+                </select>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-filter"></i> Search</button>
+            </form>
+        </section>
+
+        <section class="job-results">
+            <h3>Showing <span id="job-count">0</span> Results</h3>
+            <div id="job-results-list" class="job-grid">
+                </div>
+            <div id="no-jobs-message" style="text-align: center; margin-top: 50px; display: none;">
+                <p style="font-size: 1.2em; color: var(--light-text);">No matching jobs found. Try adjusting your filters.</p>
+            </div>
+        </section>
+    </main>
+<div id="application-modal" class="modal">
+    <div class="modal-content card">
+        <span class="close-button">&times;</span>
+        <h2 id="modal-job-title">Apply for Job Title</h2>
+        <p style="margin-bottom: 20px;">You are applying for a role at **<span id="modal-company-name"></span>**.</p>
+        
+        <form id="apply-form">
+            <input type="hidden" id="applied-job-id">
+            
+            <div class="form-group">
+                <label for="applicantName">Full Name</label>
+                <input type="text" id="applicantName" required placeholder="e.g., Jane Doe">
+            </div>
+            
+            <div class="form-group">
+                <label for="applicantEmail">Email Address</label>
+                <input type="email" id="applicantEmail" required placeholder="example@email.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="applicantResume">Resume/CV Link (Simulation)</label>
+                <input type="url" id="applicantResume" placeholder="e.g., Drive link or website URL" required>
+            </div>
+
+            <div class="form-group">
+                <label for="applicantCoverLetter">Cover Letter (Optional)</label>
+                <textarea id="applicantCoverLetter" rows="3" placeholder="Tell us why you are a good fit..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary full-width"><i class="fas fa-check-circle"></i> Submit Application</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; 
+        z-index: 100; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+        padding-top: 60px;
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto; /* 5% from the top and centered */
+        padding: 30px;
+        border: 1px solid #888;
+        width: 90%; 
+        max-width: 500px;
+        position: relative;
+    }
+
+    .close-button {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close-button:hover,
+    .close-button:focus {
+        color: #333;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .full-width { width: 100%; }
+</style>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 JobPortal Pro. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="jobs.js"></script>
+</body>
+</html>

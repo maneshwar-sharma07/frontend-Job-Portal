@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech News - JobPortal Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">JobPortal **Pro**</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Job Listings</a></li>
+                <li><a href="news.html" class="active">Tech News</a></li>
+                <li><a href="chat.html">Anon Chat</a></li>
+                <li><a href="user-login.html" class="btn btn-primary">Job Seeker Login</a></li>
+                <li><a href="recruiter-login.html" class="btn btn-secondary">Recruiter Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" style="padding-top: 30px;">
+        <section class="news-header">
+            <h1>Latest Tech Insights and Industry News</h1>
+            <p>Stay updated with the latest trends, research, and breakthroughs in the tech world.</p>
+        </section>
+        
+        <section id="news-submission-form" class="card" style="margin-bottom: 30px;">----------
+            <h3><i class="fas fa-plus-circle"></i> Submit Your Tech News/Article</h3>
+            <p style="color: red;">*NOTE: In a real app, this form would only show up for logged-in users/recruiters.*</p>
+            <form id="submit-news-form">
+                <div class="form-group">
+                    <input type="text" id="articleTitle" placeholder="Article Title (Max 255 characters)" required>
+                </div>
+                <div class="form-group">
+                    <textarea rows="5" id="articleContent" placeholder="Article Content (Post details here)" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-secondary">Post News</button>
+            </form>
+        </section>
+
+        <section class="news-list">
+            <div id="articles-container" class="news-grid">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 JobPortal Pro. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="news.js"></script>
+</body>
+</html>
+
+
+

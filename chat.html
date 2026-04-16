@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Query Board - JobPortal Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">JobPortal **Pro**</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Job Listings</a></li>
+                <li><a href="news.html">Tech News</a></li>
+                <li><a href="chat.html" class="active">Anon Chat</a></li>
+                <li><a href="user-login.html" class="btn btn-primary">Job Seeker Login</a></li>
+                <li><a href="recruiter-login.html" class="btn btn-secondary">Recruiter Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container chat-layout">
+        
+        <section class="chat-sidebar card">
+            <h3><i class="fas fa-question-circle"></i> Ask a Query Anonymously</h3>
+            <p style="font-size: 0.9em; margin-bottom: 15px;">Ask about company culture, interview tips, or salary expectations.</p>
+            
+            <button class="btn btn-secondary full-width" id="generate-anon-id" style="margin-bottom: 20px;">
+                Your Current Anonymous ID: <span id="current-anon-id">Anon-****</span>
+            </button>
+            
+            <form id="new-query-form">
+                <div class="form-group">
+                    <input type="text" id="query-title" placeholder="Short Query Title (e.g., 'Google interview process')" required>
+                </div>
+                 <div class="form-group">
+                    <textarea rows="3" id="query-details" placeholder="Elaborate on your question..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary full-width"><i class="fas fa-paper-plane"></i> Post Query</button>
+            </form>
+        </section>
+
+        <section class="chat-main card">
+            <h2><i class="fas fa-comments"></i> Public Q&A Feed</h2>
+            <div id="query-feed-container">
+                </div>
+            <p id="no-queries-message" style="text-align: center; margin-top: 50px; display: none; color: var(--light-text);">
+                Be the first to post a query!
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 JobPortal Pro. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="chat.js"></script>
+</body>
+</html>
